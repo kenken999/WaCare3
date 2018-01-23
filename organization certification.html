@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="http://localhost:5050/images/gg.css" type="text/css"> </head>
+
+<body>
+  <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+    <div class="container">
+      <form action="/home" method="post">
+        <input type="text" name="account" value="accountX0" hidden="">
+        <a class="navbar-brand" href="#" onclick="this.parentNode.submit()"><i class="fa d-inline fa-lg fa-cloud"></i><b>WaCare後台管理</b></a>
+      </form>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa d-inline fa-lg fa-bookmark-o"></i> Bookmarks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa d-inline fa-lg fa-envelope-o"></i> Contacts</a>
+          </li>
+        </ul>
+        <form action="/logout" method="post">
+          <input type="text" name="account" value="accountX0" hidden="">
+          <a class="btn navbar-btn ml-2 text-white btn-secondary" href="#" onclick="this.parentNode.submit()"><i class="fa d-inline fa-lg fa-user-circle-o"></i> Sign out</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <div class="container">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <form action="/certification" method="post">
+              <input type="text" name="account" value="accountX1" hidden="">
+              <a class="nav-link text-light" href="#" onclick="this.parentNode.submit()">機構認證</a>
+            </form>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.apple.com/hk/">機構客服</a>
+          </li>
+          <li class="nav-item">
+            <form action="/systemSettings" method="post">
+              <input type="text" name="account" value="accountX2" hidden="">
+              <a class="nav-link" href="#" onclick="this.parentNode.submit()">系統設定</a>
+            </form>
+          </li>
+        </ul>
+        <form class="form-inline m-0">
+          <input class="form-control mr-2" type="text" placeholder="Search">
+          <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table">
+            <thead>
+              <tr class="bg-table" style="color:white">
+                <th colspan="4">
+                  <h2 align="center" class="text-light">機構基本資料</h2>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <form action="/checkActivity" method="post">
+              <tr height="60px">
+                <td></td>
+                <td>機構名稱</td>
+                <td>機構名稱x</td>
+                <td></td>
+              </tr>
+              <tr height="60px">
+                <td></td>
+                <td>機構屬性</td>
+                <td>機構屬性x</td>
+                <td></td>
+              </tr>
+              <tr height="60px">
+                <td></td>
+                <td>統一編號</td>
+                <td>統一編號x</td>
+                <td></td>
+              </tr>
+              <tr height="60px">
+                <td></td>
+                <td>負責人主管姓名</td>
+                <td>負責人主管姓名x</td>
+                <td></td>
+              </tr>
+              <tr height="60px">
+                <td></td>
+                <td>國籍</td>
+                <td>國籍x</td>
+                <td></td>
+              </tr>
+              <tr height="60px">
+                <td colspan="3"></td>
+                <td align="center">
+                  <input type="radio" name="check1" value="true" required=""> 通過
+                  <input type="radio" name="check1" value="false" required=""> 駁回 </td>
+              </tr>
+              <tr height="60px">
+                <td></td>
+                <td>官方聯絡電話</td>
+                <td>官方聯絡電話x</td>
+                <td></td>
+              </tr>
+              <tr height="60px">
+                <td></td>
+                <td>機構地址</td>
+                <td>機構地址x</td>
+                <td></td>
+              </tr>
+              <tr height="60px">
+                <td></td>
+                <td>官方E-mail</td>
+                <td>官方E-mailx</td>
+                <td></td>
+              </tr>
+              <tr height="60px">
+                <td></td>
+                <td>傳真(非必填)</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr height="60px">
+                <td colspan="3"></td>
+                <td align="center">
+                  <input type="radio" name="check2" value="true" required=""> 通過
+                  <input type="radio" name="check2" value="false" required=""> 駁回 </td>
+              </tr>
+              <tr height="60px">
+                <td style="width:5%"></td>
+                <td style="width:20%">機構證明文件</td>
+                <td style="width:50%">
+                  <img class="img-fluid d-block" style="width:100%" src="http://localhost:5050/images//paper1.png" width="500" height="250"> </td>
+                <td style="width:25%"></td>
+              </tr>
+              <tr height="60px">
+                <td colspan="3"></td>
+                <td align="center">
+                  <input type="radio" name="check3" value="true" required=""> 通過
+                  <input type="radio" name="check3" value="false" required=""> 駁回 </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table">
+            <thead>
+              <tr class="bg-table" style="color:white">
+                <th colspan="4">
+                  <h2 align="center" class="text-light">承辦人聯絡資料</h2>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr height="60px">
+                <td></td>
+                <td>承辦人姓名</td>
+                <td>承辦人姓名x</td>
+                <td></td>
+              </tr>
+              <tr height="60px">
+                <td></td>
+                <td>負責單位部門</td>
+                <td>負責單位部門x</td>
+                <td></td>
+              </tr>
+              <tr height="60px">
+                <td></td>
+                <td>聯絡電話</td>
+                <td>聯絡電話x</td>
+                <td></td>
+              </tr>
+              <tr height="60px">
+                <td></td>
+                <td>E-mail(驗證信箱)</td>
+                <td>E-mail(驗證信箱)x</td>
+                <td></td>
+              </tr>
+              <tr height="60px">
+                <td colspan="3"></td>
+                <td align="center">
+                  <input type="radio" name="check4" value="true" required=""> 通過
+                  <input type="radio" name="check4" value="false" required=""> 駁回 </td>
+              </tr>
+              <tr height="60px">
+                <td></td>
+                <td>承辦人名片/識別證正反面</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr height="60px">
+                <td colspan="3"></td>
+                <td align="center">
+                  <input type="radio" name="check5" value="true" required=""> 通過
+                  <input type="radio" name="check5" value="false" required=""> 駁回 </td>
+              </tr>
+              <tr height="60px">
+                <td colspan="4" align="center">
+                  <input name="status" value="1" hidden="">
+                  <input name="index" value="1" hidden="">
+                  <input type="text" name="account" value="accountX3" hidden="">
+                  <button type="submit" class="btn btn-primary">完成審核</button>
+                </td>
+              </tr>
+            </form>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table">
+            <thead>
+              <tr class="bg-table" style="color:white">
+                <th colspan="4">
+                  <h2 align="center" class="text-light">歷史紀錄</h2>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr height="60px">
+                <td>
+                  <div id="a" class="alert alert-success" role="alert" style="visibility:hidden"><h4 class="alert-heading">title</h4><p class="mb-0">article</p><p class="mb-0">time</p></div>
+                  <!--
+                  <div id="a" class="alert alert-success" role="alert" style="visibility:hidden">
+                    <h4 class="alert-heading">title</h4>
+                    <p class="mb-0">article</p>
+                    <p class="mb-0">time</p>
+                  </div>
+                  -->
+                </td>
+                <td>
+                  <div id="b" class="alert alert-success" role="alert" style="visibility:visible"><h4 class="alert-heading">title</h4><p class="mb-0">article</p><p class="mb-0">time</p></div>
+                  <!--
+                  <div id="b" class="alert alert-success" role="alert" style="visibility:hidden">
+                    <h4 class="alert-heading">title</h4>
+                    <p class="mb-0">article</p>
+                    <p class="mb-0">time</p>
+                  </div>
+                  -->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table">
+            <thead>
+              <tr class="bg-table" style="color:white">
+                <th colspan="2">
+                  <h2 align="center" class="text-light">訊息輸入</h2>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <form action="/manuallyUploadHistoryMail" method="post">
+                <tr height="60px">
+                  <td>
+                    <input type="radio" name="who" value="a" required=""> 機構
+                    <input type="radio" name="who" value="b" required=""> WaCare </td>
+                </tr>
+                <tr height="60px">
+                  <td>標題：
+                    <input tyep="text" style="width:100%" size="60" name="title" value="標題x"> </td>
+                </tr>
+                <tr height="200px">
+                  <td valign="top">內文：<textarea style="width:100%" name="article">內文x</textarea></td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <input name="status" value="2x" hidden="">
+                    <input name="index" value="2x" hidden="">
+                    <input type="text" name="user" value="SSScc" hidden="">
+                    <input type="text" name="account" value="accountX4" hidden="">
+                    <input id="useformail" type="text" name="memberAccount" value="0" hidden="">
+                    <button type="submit" name="action" value="upload" class="btn btn-primary">送出</button>
+                  </td>
+                </tr>
+              </form>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="http://localhost:5050/images/gg.css" type="text/css"> </head>
+
+<body>
+  <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+    <div class="container">
+      <form action="/home" method="post">
+        <input type="text" name="account" value="accountX0" hidden="">
+        <a class="navbar-brand" href="#" onclick="this.parentNode.submit()"><i class="fa d-inline fa-lg fa-cloud"></i><b>WaCare後台管理</b></a>
+      </form>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa d-inline fa-lg fa-bookmark-o"></i> Bookmarks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa d-inline fa-lg fa-envelope-o"></i> Contacts</a>
+          </li>
+        </ul>
+          <form action="/logout" method="post">
+            <input type="text" name="account" value="accountX0" hidden="">
+            <a class="btn navbar-btn ml-2 text-white btn-secondary" href="#" onclick="this.parentNode.submit()"><i class="fa d-inline fa-lg fa-user-circle-o"></i> Sign out</a>
+          </form>
+      </div>
+    </div>
+  </nav>
+  <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <div class="container">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <form action="/certification" method="post">
+              <input type="text" name="account" value="accountX1" hidden="">
+              <a class="nav-link" href="#" onclick="this.parentNode.submit()">機構認證</a>
+            </form>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sendmailx">機構客服</a>
+          </li>
+          <li class="nav-item">
+            <form action="/systemSettings" method="post">
+              <input type="text" name="account" value="accountX2" hidden="">
+              <a class="nav-link" href="#" onclick="this.parentNode.submit()">系統設定</a>
+            </form>
+          </li>
+        </ul>
+        <form class="form-inline m-0">
+          <input class="form-control mr-2" type="text" placeholder="Search">
+          <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3" align="center">
+          <img class="img-fluid d-block" src="http://localhost:5050/images//icon1.png">
+          <h3 class="" align="center">
+            <p> </p>公告管理</h3>
+        </div>
+        <div class="col-md-3" align="center">
+          <img class="img-fluid d-block" src="http://localhost:5050/images/icon2.png">
+          <h3 class="" align="center">
+            <p> </p>機構管理</h3>
+        </div>
+        <div class="col-md-3" align="center">
+          <img class="img-fluid d-block" src="http://localhost:5050/images/icon3.png">
+          <h3 class="" align="center">
+            <p> </p>客服管理</h3>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 10px;right:10px;padding:2px;background-color: #00b0eb;border-radius: 8px; width:100px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:12px;color:white">made with&nbsp;&nbsp;
+    <img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16">
+  </pingendo>
+</body>
+
+</html>
